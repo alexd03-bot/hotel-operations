@@ -19,7 +19,9 @@ public class Room {
 
     }
 
+    public Room() {
 
+    }
 
 
     //occupied
@@ -97,17 +99,20 @@ public class Room {
     }
     //endregion
 
-    public void checkIn() {
+    public boolean checkIn() {
         setOccupied(true);
         setDirty(true);
+        return true;
     }
-    public void checkOut() {
+    public boolean checkOut() {
         setOccupied(false);
         setDirty(true);
+        return true;
     }
-    public void cleanRoom() {
+    public boolean cleanRoom() {
         setOccupied(false);
         setDirty(false);
+        return true;
     }
 
 
